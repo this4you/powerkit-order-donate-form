@@ -14,6 +14,7 @@ export class OrderFormValidator implements FormValidator<CreateOrderFormValues> 
             sureName: ValidatorFieldUtils.required(data.sureName) || ValidatorFieldUtils.maxLength(data.sureName, 50),
             instagram: ValidatorFieldUtils.maxLength(data.instagram, 250),
             phoneNumber: ValidatorFieldUtils.required(data.phoneNumber) || this.validatePhoneNumber(data.phoneNumber),
+            militaryNumber: ValidatorFieldUtils.maxLength(data.militaryNumber, 50),
             amount: ValidatorFieldUtils.maxAmount(data.amount, MAX_POWER_AMOUNT),
             region: ValidatorFieldUtils.required(data.region),
             postOffice: ValidatorFieldUtils.required(data.postOffice),

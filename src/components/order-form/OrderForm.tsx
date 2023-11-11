@@ -58,6 +58,8 @@ export const OrderForm: React.FC<OrderFormProps> = ({ setOrderFormResult }) => {
                                    variant="standard"/>
                     <FormTextField required sx={inputStyle} id="phoneNumber" name="phoneNumber" type="tel"
                                    label="Номер телефону отримувача" variant="standard" maskConfig={phoneMaskConfig}/>
+                    <FormTextField sx={inputStyle} id="militaryNumber" name="militaryNumber"
+                                   label="Номер військової частини" variant="standard"/>
                     <FormTextField required sx={inputStyle}  type="number" id="amount" name="amount" label="Кількість повербанків"
                                    variant="standard"/>
                     <RegionSearchField/>

@@ -3,6 +3,7 @@ export type CreateOrder = {
     sureName: string;
     instagram: string;
     phoneNumber: string;
+    militaryNumber: string;
     amount: number;
     region: string;
     postOffice: string;

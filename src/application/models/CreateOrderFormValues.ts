@@ -6,6 +6,7 @@ export type CreateOrderFormValues = {
     sureName: string;
     instagram: string;
     phoneNumber: string;
+    militaryNumber: string;
     amount: number;
     region: Region;
     postOffice: PostOffice;
