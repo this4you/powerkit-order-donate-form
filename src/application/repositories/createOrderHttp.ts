@@ -13,6 +13,7 @@ export const createOrderHttp = async (createOrder: CreateOrder): Promise<CreateO
             SureName: createOrder.sureName,
             Instagram: createOrder.instagram,
             PhoneNumber: createOrder.phoneNumber,
+            Amount: createOrder.amount,
             Region: createOrder.region,
             PostOffice: createOrder.postOffice,
             AdditionalInfo: createOrder.additionalInfo,

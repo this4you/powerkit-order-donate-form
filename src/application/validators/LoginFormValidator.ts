@@ -5,14 +5,16 @@ import { FieldErrors } from 'react-hook-form/dist/types/errors';
 import { ValidatorFieldUtils } from './ValidatorUtils.ts';
 
 const FILE_MAX_SIZE_BYTES = 7_000_000;
+const MAX_POWER_AMOUNT = 30;
 
 export class OrderFormValidator implements FormValidator<CreateOrderFormValues> {
     validate(data: CreateOrderFormValues): FieldErrors<CreateOrderFormValues> {
         return {
             name: ValidatorFieldUtils.required(data.name) || ValidatorFieldUtils.maxLength(data.name, 50),
             sureName: ValidatorFieldUtils.required(data.sureName) || ValidatorFieldUtils.maxLength(data.sureName, 50),
-            instagram: ValidatorFieldUtils.required(data.instagram) || ValidatorFieldUtils.maxLength(data.instagram, 250),
+            instagram: ValidatorFieldUtils.maxLength(data.instagram, 250),
             phoneNumber: ValidatorFieldUtils.required(data.phoneNumber) || this.validatePhoneNumber(data.phoneNumber),
+            amount: ValidatorFieldUtils.maxAmount(data.amount, MAX_POWER_AMOUNT),
             region: ValidatorFieldUtils.required(data.region),
             postOffice: ValidatorFieldUtils.required(data.postOffice),
             approveDocument: this.validateApproveDocument(data.approveDocument),
