@@ -10,7 +10,7 @@ import { FormResult } from '../../application/models/FormResult.ts';
 import { FileUploader } from '../file-uploader/FileUploader.tsx';
 import { ClipLoader } from 'react-spinners';
 
-const phoneMaskConfig = { mask: '+380 99 999 99 99', maskChar: '*' };
+const phoneMaskConfig = { mask: '+38 999 999 99 99', maskChar: '*' };
 
 type OrderFormProps = {
     setOrderFormResult: (formResult: FormResult) => void
